@@ -9,6 +9,11 @@ const Navbar = () => {
       </Link>
       <ul className="nav-list">
         <li className="nav-link">
+          <Link to="/">
+            <i className="fas fa-home"></i>
+          </Link>
+        </li>
+        <li className="nav-link">
           <Link to="/generate">Generate</Link>
         </li>
         <li className="nav-link">
