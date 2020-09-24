@@ -36,6 +36,10 @@ button:focus {
   padding: 0 $px;
 }
 
+.page {
+  min-height: 100vh;
+}
+
 // Navbar
 .navbar {
   width: 100%;
@@ -165,6 +169,66 @@ button:focus {
 }
 
 // Home
+.home-page {
+  .home-wrapper {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    .info,
+    .img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .info {
+      p {
+        margin: 80px 0 50px 0;
+        font-size: 1.4rem;
+        position: relative;
+      }
+
+      p::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: 0;
+        width: 100px;
+        height: 4px;
+        background-color: $col-pink;
+        border-radius: 5px;
+      }
+
+      a {
+        font-size: 1.4rem;
+        background-color: $col-purple;
+        color: $col-light;
+        padding: 10px;
+        box-shadow: 4px 4px $col-pink;
+        transition: transform 0.3s;
+      }
+
+      a:hover {
+        transform: scale(1.05);
+      }
+
+      a:active {
+        transform: scale(0.95);
+      }
+    }
+
+    .img {
+      width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
 
 // Generate
 
@@ -223,5 +287,22 @@ button:focus {
 
   .nav-menu-btn {
     display: flex;
+  }
+
+  // Home
+  .home-page {
+    .home-wrapper {
+      padding-top: 30px;
+      grid-template-columns: 1fr;
+
+      .info {
+        text-align: center;
+
+        a {
+          width: 100%;
+          box-shadow: 0px 4px $col-pink;
+        }
+      }
+    }
   }
 }
