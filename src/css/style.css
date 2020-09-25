@@ -255,25 +255,36 @@ button:focus {
   max-width: 100%;
 }
 
-.generate-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.generate-page .reset-btn {
+  font-size: 1.4rem;
+  padding: 10px;
+  margin: 40px 0 80px 0;
+  border: none;
+  background-color: #e20c4d;
+  color: #eeeeee;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.generate-page .reset-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .generate-page .generate-btn {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
   width: 200px;
   height: 200px;
   border-radius: 50%;
   border: none;
   background: none;
-  position: relative;
   -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
   cursor: pointer;
@@ -311,6 +322,11 @@ button:focus {
   font-size: 1.4rem;
 }
 
+.generate-page .generate-btn.hide {
+  -webkit-animation: btnHide 0.5s forwards ease;
+          animation: btnHide 0.5s forwards ease;
+}
+
 .generate-page .generate-btn:hover .outer {
   -webkit-animation: btnRotate 4s infinite linear;
           animation: btnRotate 4s infinite linear;
@@ -322,7 +338,82 @@ button:focus {
 }
 
 .generate-page .result {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  margin-top: 40px;
+}
+
+.generate-page .result h2 {
+  color: #2e0b5c;
+  position: relative;
+}
+
+.generate-page .result h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #e20c4d;
+}
+
+.generate-page .result ul {
+  margin-top: 40px;
+  font-size: 1.4rem;
+}
+
+.generate-page .result ul li {
+  padding: 12px;
+  background-color: #eeeeee;
+}
+
+.generate-page .result ul li .hashtag {
+  color: #e20c4d;
+}
+
+.generate-page .result ul li .link {
+  color: #2e0b5c;
+}
+
+.generate-page .result ul li:nth-child(even) {
+  background-color: #fff;
+}
+
+.generate-page .result ul li .palette-container .color-item {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  padding: 8px 0;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.generate-page .result ul li .palette-container,
+.generate-page .result ul li .components-container,
+.generate-page .result ul li .defaults-container {
+  margin-top: 16px;
+}
+
+.generate-page .result ul li .palette-container i,
+.generate-page .result ul li .components-container i,
+.generate-page .result ul li .defaults-container i {
+  color: #e20c4d;
+}
+
+.generate-page .result.show {
+  -webkit-animation: resultShow 0.5s forwards ease 0.6s;
+          animation: resultShow 0.5s forwards ease 0.6s;
 }
 
 @-webkit-keyframes beat {
@@ -400,6 +491,58 @@ button:focus {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes btnHide {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes btnHide {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes resultShow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes resultShow {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    visibility: visible;
   }
 }
 
