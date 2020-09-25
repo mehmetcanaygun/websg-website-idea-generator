@@ -46,20 +46,22 @@
     ["#DDE0BD", "#D0D1AC", "#B6A39E", "#948B89", "#726E75"]
   ],
   "components": [
-    "Product/Recipe/Menu/Project/Work Cards",
+    "Cards Related To The Theme",
     "Personnel Cards",
     "Specification Cards With Icons",
-    "Slide Show",
+    "Slide Show With Prev/Next Buttons",
     "Photo Gallery",
     "Email Subscription Form",
     "Contact Form",
     "Social Media Buttons",
     "Back To Top Button",
-    "Modal"
+    "Modal With A YouTube Video",
+    "Blog Posts",
+    "Testimonials",
+    "Page Header With Breadcrumbs"
   ],
   "defaults": [
-    "Navbar or Sidebar",
-    "Footer",
+    "Navbar/Sidebar/Footer",
     "Call To Action Button",
     "Contact Info",
     "Responsive Design",

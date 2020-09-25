@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -55,6 +55,12 @@ const Generate = () => {
     setDefaults([]);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <main className="page generate-page container">
       <button
@@ -104,15 +110,15 @@ const Generate = () => {
               ))}
             </div>
           </li>
-          <li>
+          <li className="text-justify">
             <strong>Notes:</strong> Websites usually have pages such as{" "}
             <em>Home, About, Projects, Products, Gallery, Contact</em> and so
             on. You can create these pages or create any other type of pages as
-            you like. There is no limit. You can use plain HTML, CSS and JS or
-            you can use a framework. The goal is improving your skills. You can
-            share your website with{" "}
-            <span className="hashtag">"#WebsgChallenge"</span> on Twitter or
-            Instagram to show your progress with everyone. You can{" "}
+            you like. You can also add more components to your website. There is
+            no limit. You can use plain HTML, CSS and JS or you can use a
+            framework. The goal is improving your skills. You can share your
+            website with <span className="hashtag">"#WebsgChallenge"</span> on
+            Twitter or Instagram to show your progress with everyone. You can{" "}
             <Link to="/about" className="link">
               <strong>click here</strong>
             </Link>{" "}
@@ -120,7 +126,13 @@ const Generate = () => {
             website.
           </li>
         </ul>
-        <button className="reset-btn" onClick={() => reset()}>
+        <button
+          className="reset-btn"
+          onClick={() => {
+            reset();
+            window.scrollTo(0, 0);
+          }}
+        >
           Reset
         </button>
       </div>

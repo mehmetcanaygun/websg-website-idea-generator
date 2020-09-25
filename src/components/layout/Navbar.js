@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [toggled, setToggled] = useState(false);
 
+  const body = document.getElementsByTagName("body");
+
+  if (toggled) {
+    body[0].style.overflowY = "hidden";
+  } else {
+    body[0].style.overflowY = "visible";
+  }
+
   return (
     <nav className="navbar">
       <Link to="/" className="nav-logo">
@@ -11,15 +19,19 @@ const Navbar = () => {
       </Link>
       <ul className={toggled ? "nav-list toggled" : "nav-list"}>
         <li className="nav-link">
-          <Link to="/">
+          <Link to="/" onClick={() => setToggled(false)}>
             <i className="fas fa-home"></i>
           </Link>
         </li>
         <li className="nav-link">
-          <Link to="/generate">Generate</Link>
+          <Link to="/generate" onClick={() => setToggled(false)}>
+            Generate
+          </Link>
         </li>
         <li className="nav-link">
-          <Link to="/about">About</Link>
+          <Link to="/about" onClick={() => setToggled(false)}>
+            About
+          </Link>
         </li>
       </ul>
       <button

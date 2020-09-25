@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <main className="page about-page container">
       <h2>About</h2>
@@ -24,7 +30,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Google Fonts
+            <i className="fas fa-chevron-right"></i> Google Fonts
           </a>
         </li>
         <li>
@@ -33,7 +39,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Font Awesome
+            <i className="fas fa-chevron-right"></i> Font Awesome
           </a>
         </li>
         <li>
@@ -42,7 +48,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Unsplash
+            <i className="fas fa-chevron-right"></i> Unsplash
           </a>
         </li>
         <li>
@@ -51,7 +57,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Pexels
+            <i className="fas fa-chevron-right"></i> Pexels
           </a>
         </li>
         <li>
@@ -60,7 +66,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Videvo
+            <i className="fas fa-chevron-right"></i> Videvo
           </a>
         </li>
         <li>
@@ -69,7 +75,16 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Lorem Picsum
+            <i className="fas fa-chevron-right"></i> Lorem Picsum
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://logomakr.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fas fa-chevron-right"></i> LogoMakr
           </a>
         </li>
         <li>
@@ -78,7 +93,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Drawkit
+            <i className="fas fa-chevron-right"></i> Drawkit
           </a>
         </li>
         <li>
@@ -87,7 +102,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            unDraw
+            <i className="fas fa-chevron-right"></i> unDraw
           </a>
         </li>
         <li>
@@ -96,7 +111,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            CSS matic
+            <i className="fas fa-chevron-right"></i> CSS matic
           </a>
         </li>
         <li>
@@ -105,7 +120,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            CSS Gradient
+            <i className="fas fa-chevron-right"></i> CSS Gradient
           </a>
         </li>
         <li>
@@ -114,7 +129,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            CSS Stripes Generator
+            <i className="fas fa-chevron-right"></i> CSS Stripes Generator
           </a>
         </li>
         <li>
@@ -123,7 +138,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            cubic-bezier
+            <i className="fas fa-chevron-right"></i> cubic-bezier
           </a>
         </li>
         <li>
@@ -132,7 +147,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Coolors
+            <i className="fas fa-chevron-right"></i> Coolors
           </a>
         </li>
         <li>
@@ -141,7 +156,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Get Waves
+            <i className="fas fa-chevron-right"></i> Get Waves
           </a>
         </li>
         <li>
@@ -150,7 +165,7 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Hero Patterns
+            <i className="fas fa-chevron-right"></i> Hero Patterns
           </a>
         </li>
         <li>
@@ -159,7 +174,8 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            AOS Animate On Scroll Library
+            <i className="fas fa-chevron-right"></i> AOS Animate On Scroll
+            Library
           </a>
         </li>
         <li>
@@ -168,7 +184,8 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Brad Traversy - Design Resources For Developers
+            <i className="fas fa-chevron-right"></i> Brad Traversy - Design
+            Resources For Developers
           </a>
         </li>
       </ul>
