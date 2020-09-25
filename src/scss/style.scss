@@ -378,6 +378,50 @@ button:focus {
 }
 
 // About
+.about-page {
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  h2 {
+    color: $col-purple;
+    font-size: 2.5rem;
+    position: relative;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: $col-pink;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin: 40px 0;
+
+    a {
+      color: $col-purple;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    margin-top: 40px;
+    font-size: 1.4rem;
+
+    li {
+      padding: 6px;
+
+      &:nth-child(odd) {
+        background-color: $col-light;
+      }
+    }
+  }
+}
 
 // NotFound
 
@@ -490,6 +534,15 @@ button:focus {
           width: 100%;
           box-shadow: 0px 4px $col-pink;
         }
+      }
+    }
+  }
+
+  // Generate
+  .generate-page {
+    .generate-btn {
+      .outer {
+        animation: btnRotate 4s infinite linear;
       }
     }
   }
